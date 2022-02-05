@@ -24,7 +24,7 @@
     <header class="header">
       <div class="container nav-container">
         <nav class="header__navigation">
-          <a href="./index.html" class="logo header-logo animate__heartBeat"
+          <a href="./index.html" class="logo header-logo animate-heartbeat"
             ><span class="logo__word">Web</span>Studio</a
           >
           <ul class="header-menu-list header-menu-list__mix">
@@ -460,7 +460,7 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-contacts">
-          <a href="./index.html" class="footer-logo logo animate__heartBeat"
+          <a href="./index.html" class="footer-logo logo animate-heartbeat"
             ><span class="logo__word">Web</span>Studio</a
           >
           <address id="contacts">
@@ -551,16 +551,25 @@
             <label class="modal-group">
               <span class="modal-label"> Имя</span>
               <input class="modal-input" type="text" name="user_name" />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-name-modal"></use>
+              </svg>
             </label>
 
             <label class="modal-group">
               <span class="modal-label">Телефон</span>
               <input class="modal-input" type="text" name="user_phone" />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-phone-modal"></use>
+              </svg>
             </label>
 
             <label class="modal-group">
               <span class="modal-label">Почта</span>
               <input class="modal-input" type="text" name="user_mail" />
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#icon-mail-modal"></use>
+              </svg>
             </label>
 
             <label class="modal-group">
@@ -571,16 +580,17 @@
                 placeholder="Введите текст"
               ></textarea>
             </label>
-
-            <input
-              class="modal-check-box"
-              type="checkbox"
-              name="user_agreement"
-              value="user_agree"
-            />
-            <label class="modal-check" for=""
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="modal-check--link">Условия договора</a></label
+            <label class="modal-check-label modal-group" for="modal-check-box">
+              <input
+                class="modal-check-box visually-hidden"
+                type="checkbox"
+                name="user_agreement"
+                value="user_agree"
+                id="modal-check-box"
+              />
+              <span class="modal-check-icon"> </span>
+              Соглашаюсь с рассылкой и принимаю
+              <a class="modal-check--link" href="">Условия договора</a></label
             >
           </div>
           <button class="modal-submit" type="submit">Отправить</button>

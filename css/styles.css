@@ -167,7 +167,7 @@ ul {
   }
 }
 
-.animate__heartBeat {
+.animate-heartbeat {
   -webkit-animation-name: heartBeat;
   animation-name: heartBeat;
   -webkit-animation-duration: 10000ms;
@@ -827,6 +827,7 @@ ul {
   background-color: transparent;
   color: var(--filter-button-color);
   padding-left: 16px;
+  transition: border-color var(--main-transition-settings);
 }
 
 .footer-mail-input-field::placeholder {
@@ -953,6 +954,7 @@ ul {
 }
 
 .modal-group {
+  position: relative;
   display: block;
   margin-right: 40px;
   margin-left: 40px;
@@ -978,6 +980,7 @@ ul {
   border-style: solid;
   border-color: rgba(33, 33, 33, 0.2);
   padding-left: 42px;
+  transition: border-color var(--main-transition-settings);
 }
 
 .modal-input:hover {
@@ -986,6 +989,22 @@ ul {
 
 .modal-input:hover .modal-label {
   color: var(--accent-text-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(25%);
+  fill: currentColor;
+  transition: fill var(--main-transition-settings);
+}
+
+.modal-group:hover .modal-icon,
+.modal-group:focus-within .modal-icon {
+  fill: var(--accent-text-color);
 }
 
 .modal-textarea {
@@ -999,16 +1018,41 @@ ul {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(33, 33, 33, 0.2);
+  resize: none;
 }
 
 .modal-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-check-box {
+.modal-check-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-text-color);
 }
-.modal-check {
+
+.modal-check-icon {
+  display: block;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--main-text-color);
+  border-radius: 4px;
+  margin-right: 8px;
 }
+
+.modal-check-box:checked + .modal-check-icon {
+  background-color: var(--accent-text-color);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
+  border-color: var(--accent-text-color);
+}
+
 .modal-submit {
   display: block;
   margin-top: 30px;
@@ -1030,4 +1074,5 @@ ul {
 .modal-check--link {
   color: var(--accent-text-color);
   text-decoration: underline;
+  margin-left: 4px;
 }
