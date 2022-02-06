@@ -759,6 +759,10 @@ ul {
   align-items: baseline;
 }
 
+.footer-contacts {
+  flex-grow: 1;
+}
+
 .footer-media {
   margin-left: 70px;
 }
@@ -904,7 +908,7 @@ ul {
   min-width: 528px;
   min-height: 581px;
   color: #000000;
-  padding: 15px;
+  padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -913,18 +917,17 @@ ul {
 
 .close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   transition: background-color var(--main-transition-settings), fill var(--main-transition-settings),
     box-shadow var(--main-transition-settings);
 }
@@ -946,18 +949,16 @@ ul {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 .modal-form-group {
-  margin-top: 12px;
+  margin-bottom: 30px;
 }
 
-.modal-group {
+.modal-group-data {
   position: relative;
   display: block;
-  margin-right: 40px;
-  margin-left: 40px;
   margin-bottom: 10px;
 }
 
@@ -1007,7 +1008,13 @@ ul {
   fill: var(--accent-text-color);
 }
 
+.modal-group-comment {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .modal-textarea {
+  display: block;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -1055,7 +1062,6 @@ ul {
 
 .modal-submit {
   display: block;
-  margin-top: 30px;
   width: 200px;
   height: 50px;
   border: none;
